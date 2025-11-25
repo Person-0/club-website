@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #0b2713;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(180deg, #0b2713, #1f542d);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+.header-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: min(3.5vw, 1rem);
+}
+
+.material-symbols-outlined {
+    margin-right: 0.5rem;
+}
+
+nav {
+    background-color: #0b2713;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    background: #141414;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+h2 {
+    color: #38a056;
+    text-shadow: 2px 2px 2px black;
+    border-bottom: 2px solid #0b2713;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.project-card h3 {
+    margin-top: 10px;
+}
+
+.event-list li {
+    margin-bottom: 10px;
+    list-style-type: none;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #42b864;
+    color: #000000;
+    border: 1px solid green;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+.btn:hover {
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    nav {
+        display: none;
+    }
+}
