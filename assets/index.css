@@ -33,7 +33,7 @@ header h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: min(3.5vw, 1rem);
+    font-size: min(2.67vw, 1rem);
 }
 
 .material-symbols-outlined {
