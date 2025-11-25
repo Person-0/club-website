@@ -169,8 +169,11 @@ canvas {
 #bg>img {
     width: 100%;
     height: auto;
-    transform: translateY(10vh);
+    min-height: 75vh;
+    max-height: 100vh;
+    transform: translateY(20vh);
     position: fixed;
+    bottom: 0;
     user-select: none;
     filter: drop-shadow(4px 4px 5px black);
     -webkit-user-drag: none;
