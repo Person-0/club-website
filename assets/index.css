@@ -172,6 +172,7 @@ canvas {
     transform: translateY(10vh);
     position: fixed;
     user-select: none;
+    filter: drop-shadow(4px 4px 5px black);
     -webkit-user-drag: none;
     -moz-user-drag: none;
     user-drag: none;
