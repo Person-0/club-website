@@ -17,7 +17,7 @@ const cursor = {
 
 let lastRecords = [];
 
-canvas.addEventListener("mousemove", ({ clientX, clientY }) => {
+window.addEventListener("mousemove", ({ clientX, clientY }) => {
     cursor.x = clientX;
     cursor.y = clientY;
 
