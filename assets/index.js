@@ -32,11 +32,9 @@ function drawCircle(x, y) {
 }
 
 function removeLastCursorInstance() {
-    const len = lastRecords.length;
-    if(len > 0) {
-        if(len > MAX_TRAILS) {
-            lastRecords = lastRecords.slice(MAX_TRAILS, len);
-            return;
+    if(lastRecords.length > 0) {
+        while(lastRecords.length > MAX_TRAILS) {
+            lastRecords.shift();
         }
         lastRecords.shift();
     }
