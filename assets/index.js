@@ -8,6 +8,7 @@ function resize_canvas() {
 resize_canvas();
 window.onresize = resize_canvas();
 
+const MAX_TRAILS = 50;
 const cursor = {
     x: -Infinity,
     y: -Infinity,
@@ -25,7 +26,7 @@ canvas.addEventListener("mousemove", ({ clientX, clientY }) => {
 
 function drawCircle(x, y) {
     ctx.beginPath();
-    ctx.strokeStyle = "white";
+    ctx.strokeStyle = "rgba(255, 255, 255, 0.25)";
     ctx.arc(x, y, cursor.r, 0, Math.PI * 2);
     ctx.stroke();
 }
@@ -33,8 +34,8 @@ function drawCircle(x, y) {
 function removeLastCursorInstance() {
     const len = lastRecords.length;
     if(len > 0) {
-        if(len > 20) {
-            lastRecords = lastRecords.slice(20, len);
+        if(len > MAX_TRAILS) {
+            lastRecords = lastRecords.slice(MAX_TRAILS, len);
             return;
         }
         lastRecords.shift();
