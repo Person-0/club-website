@@ -15,7 +15,7 @@ const gravitylerpfac = 0.00045;
 const cursor = {
     x: -Infinity,
     y: -Infinity,
-    r: 50
+    r: 10
 }
 const androidLogo = new Image();
 androidLogo.src = "./assets/icon.png";
@@ -36,9 +36,9 @@ window.addEventListener("click", () => {
 
 function drawCircle(x, y) {
     ctx.beginPath();
-    ctx.strokeStyle = "rgba(255, 255, 255, 0.25)";
+    ctx.fillStyle = "rgba(255, 255, 255, 0.25)";
     ctx.arc(x, y, cursor.r, 0, Math.PI * 2);
-    ctx.stroke();
+    ctx.fill();
 }
 
 function removeLastCursorInstance() {
@@ -61,6 +61,7 @@ function animate() {
     for(const record of lastRecords) {
         drawCircle(record.x, record.y);
     }
+    drawCircle(cursor.x, cursor.y);
 
     for(const clickRecord of clickRecords){
         if(clickRecord.y > window.innerHeight){
@@ -73,7 +74,7 @@ function animate() {
         clickRecord.y += clickRecord.velocity;
     }
 
-    if(now - lastRemoveTime >= 7) {
+    if(now - lastRemoveTime >= delta / 5) {
         removeLastCursorInstance();
         lastRemoveTime = now;
     }
