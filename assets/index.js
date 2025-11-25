@@ -8,7 +8,7 @@ function resize_canvas() {
 resize_canvas();
 window.onresize = resize_canvas();
 
-const MAX_TRAILS = 50;
+const MAX_TRAILS = 10;
 const cursor = {
     x: -Infinity,
     y: -Infinity,
